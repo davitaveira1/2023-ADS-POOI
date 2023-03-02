@@ -29,12 +29,16 @@ public class Ex01 {
         arquivo = false;
         */
         
-        String nome;
+        String nome,sobrenome;
         Scanner entrada = new Scanner(System.in);
         
         System.out.println("Informe o nome: ");
         nome = entrada.next();
-        System.out.println("O nome digitado é: "+nome);
+        System.out.println("Informe o sobrenome: ");
+        sobrenome = entrada.next();
+        //System.out.println("O nome digitado é: "+nome);
+        System.out.println(nome);
+        System.out.println(sobrenome);
                 
     }
     
