@@ -21,7 +21,7 @@ public class Ex01 {
         System.out.println("Informe o seu nome, idade e média: ");
         nome = entrada.next();
         idade = entrada.nextInt();
-        media = entrada.nextDouble();        
+        media = entrada.nextDouble();    
 
         
         //System.out.println("Valores digitados: " +nome+"\n"+idade+"\n"+media);

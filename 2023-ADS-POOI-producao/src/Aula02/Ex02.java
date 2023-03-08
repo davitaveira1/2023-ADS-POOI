@@ -13,6 +13,19 @@ public class Ex02 {
     
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        int idade;
+        double media;
+        String nome;
+        
+        
+        idade = entrada.nextInt(); 
+        entrada.nextLine();
+        nome = entrada.nextLine();  
+        media = entrada.nextDouble();
+        
+        System.out.println("Idade: "+idade);
+        System.out.println("Nome: "+nome);
+        System.out.println("Media: "+media);
         
         
     }
