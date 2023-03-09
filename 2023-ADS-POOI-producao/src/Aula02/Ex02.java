@@ -8,10 +8,12 @@ package Aula02;
  *
  * @author Davi
  */
+import java.util.Locale;
 import java.util.Scanner;
 public class Ex02 {
     
     public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
         Scanner entrada = new Scanner(System.in);
         int idade;
         double media;
@@ -20,12 +22,12 @@ public class Ex02 {
         
         idade = entrada.nextInt(); 
         entrada.nextLine();
-        nome = entrada.nextLine();  
+        nome = entrada.nextLine();        
         media = entrada.nextDouble();
         
         System.out.println("Idade: "+idade);
         System.out.println("Nome: "+nome);
-        System.out.println("Media: "+media);
+        System.out.print("Media: "+media);
         
         
     }
