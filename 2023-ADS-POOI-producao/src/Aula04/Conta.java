@@ -10,6 +10,7 @@ package Aula04;
  */
 public class Conta {
     
+    String nomeTitular;
     String nConta;
     double saldo;
     
@@ -29,10 +30,36 @@ public class Conta {
         System.out.println("Saldo atual: "+saldo);
     }
     
+    
+    void transferir(Conta contaCreditada,double valor){
+        if(saldo >= valor){
+            //debitar
+            saldo = saldo - valor;
+            //creditar
+            contaCreditada.saldo = contaCreditada.saldo + valor;            
+        }else{
+            System.out.println("Saldo insuficiente!");
+            System.out.println("Valor do débito: "+valor);
+        }
+        
+        System.out.println(nomeTitular+ ": Saldo conta creditada = "+contaCreditada.saldo);
+        System.out.println(contaCreditada.nomeTitular+ ": Saldo conta debitada = "+saldo);
+        
+    }
+
+
     public static void main(String[] args) {
-        Conta c1 = new Conta();
-        //c1.saldo = 500;
-        //c1.creditar(1000);
+        Conta contaDavi = new Conta();
+        Conta contaLucas = new Conta();
+        
+        contaDavi.nomeTitular = "Davi";
+        contaLucas.nomeTitular = "Lucas";
+        
+        contaDavi.saldo = 2000;
+        
+        contaDavi.transferir(contaLucas, 1000);
+        
+        
         
     }
     
