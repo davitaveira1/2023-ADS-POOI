@@ -25,6 +25,9 @@ public class Ex03 {
 */
         
         int[] a = {4,5,6,7};
+        String[] b = {"davi","daniel","lucas"};
+        String[] c;
+        c = new String[5];
         
         for(int i=0;i < a.length;i++){
             System.out.println(a[i]);
