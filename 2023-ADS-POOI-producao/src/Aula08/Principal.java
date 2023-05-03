@@ -15,6 +15,8 @@ public class Principal {
         Aluno a1 = new Aluno("Lucas");
         
         Turma poo = new Turma("ADS", p1, "103", 10);
+        poo.adicionarAluno(a1);
+        poo.imprimir();
         
     }
     

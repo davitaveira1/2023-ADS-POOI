@@ -33,6 +33,7 @@ public class Turma {
             for (int i = 0; i < alunos.length; i++) {
                 if (alunos[i] == null) {
                     alunos[i] = a;
+                    break;
                 }
             }
             System.out.println("Aluno inserido com sucesso!");
@@ -41,9 +42,16 @@ public class Turma {
     }
 
     void imprimir() {
+        System.out.println("=====IMPRESSÃO=====");
         for (int i = 0; i < alunos.length; i++) {
-            System.out.println("Aluno: "+alunos[i].getNome());
+            if (alunos[i] == null) {
+                break;
+            } else {
+                System.out.println("Aluno: " + alunos[i].getNome());
+            }
+
         }
+        System.out.println("====FIM IMPRESSÃO====");
     }
 
 }
