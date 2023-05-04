@@ -104,5 +104,9 @@ public class Turma {
             System.out.println("Aluno não encontrado!");
         }
     }
+    
+    void qtdAlunosTurma(){
+        System.out.println("Alunos na turma: "+qtdAlunos);
+    }
 
 }
