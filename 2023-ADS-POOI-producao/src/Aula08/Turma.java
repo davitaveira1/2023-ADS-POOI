@@ -43,14 +43,19 @@ public class Turma {
     }
 
     void imprimir() {
-        System.out.println("=====IMPRESSÃO=====");
+        System.out.println("\n=====DADOS DA TURMA=====");
+        System.out.println("Curso: "+curso);
+        System.out.println("Professor: "+professor.getNome());
+        System.out.println("Sala: "+sala);
+        System.out.println("Máximo de alunos: "+Max_alunos);
+        System.out.println("====ALUNOS MATRICULADOS====");
         for (int i = 0; i < alunos.length; i++) {
             if (alunos[i] != null) {
                 System.out.println("Aluno: " + alunos[i].getNome());
             }
 
         }
-        System.out.println("====FIM IMPRESSÃO====");
+        System.out.println("====FIM IMPRESSÃO====\n");
     }
 
     void alterarAluno(String nomeAntigo, String novoNome) {
