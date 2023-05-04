@@ -33,6 +33,7 @@ public class Turma {
             for (int i = 0; i < alunos.length; i++) {
                 if (alunos[i] == null) {
                     alunos[i] = a;
+                    qtdAlunos++;
                     break;
                 }
             }
@@ -44,14 +45,59 @@ public class Turma {
     void imprimir() {
         System.out.println("=====IMPRESSÃO=====");
         for (int i = 0; i < alunos.length; i++) {
-            if (alunos[i] == null) {
-                break;
-            } else {
+            if (alunos[i] != null) {
                 System.out.println("Aluno: " + alunos[i].getNome());
             }
 
         }
         System.out.println("====FIM IMPRESSÃO====");
+    }
+
+    void alterarAluno(String nomeAntigo, String novoNome) {
+        int flag = 0;
+        for (int i = 0; i < alunos.length; i++) {
+
+            if (alunos[i] == null) {
+                break;
+            } else {
+                if (alunos[i].getNome().equals(nomeAntigo)) {
+                    alunos[i].setNome(novoNome);
+                    flag = 1;
+                    break;
+                }
+            }
+
+        }
+
+        if (flag == 1) {
+            System.out.println("Aluno alterado com sucesso!");
+        } else {
+            System.out.println("Aluno não encontrado!");
+        }
+
+    }
+
+    void excluirAluno(String nome) {
+        int flag = 0;
+        for (int i = 0; i < alunos.length; i++) {
+
+            if (alunos[i] == null) {
+                break;
+            } else {
+                if (alunos[i].getNome().equals(nome)) {
+                    alunos[i]=null;
+                    flag = 1;
+                    break;
+                }
+            }
+
+        }
+
+        if (flag == 1) {
+            System.out.println("Aluno excluído com sucesso!");
+        } else {
+            System.out.println("Aluno não encontrado!");
+        }
     }
 
 }
