@@ -23,7 +23,7 @@ public class Principal {
         poo.imprimir();
         poo.excluirAluno("Lucas Souza");
         poo.imprimir();
-        
+        System.out.println(poo.alunos);
         
     }
     
