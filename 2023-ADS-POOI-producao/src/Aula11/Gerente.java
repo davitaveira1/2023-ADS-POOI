@@ -9,16 +9,18 @@ package Aula11;
  * @author Davi
  */
 public class Gerente extends Funcionario {
-    
+
     int senha;
     int nroFuncionarioGerenciados;
-    
-    public boolean autentica(int senha){
-        if(senha == this.senha)
+
+    public boolean autentica(int senha) {
+        if (senha == this.senha) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
+
     
     @Override
     public double getBonificacao(){

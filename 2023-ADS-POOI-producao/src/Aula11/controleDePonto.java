@@ -10,7 +10,7 @@ package Aula11;
  */
 public class controleDePonto {
     
-    public void registra(Funcionario f){
+    public void registrar(Funcionario f){
         System.out.println("Registro: "+f.nome);
     }
     

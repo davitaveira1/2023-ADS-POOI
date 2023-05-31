@@ -13,6 +13,12 @@ public class Principal {
     public static void main(String[] args) {
         Funcionario f1 = new Funcionario();
         Gerente g1 = new Gerente();
+        controleDePonto controle = new controleDePonto();
+        
+        g1.nome = "Davi";
+        controle.registrar(g1);
+        
+        
         /*
         g1.senha = 123;
         //f1.senha = 123;
