@@ -27,6 +27,7 @@ public class ex2_cnh {
         }else{
             throw new IllegalArgumentException();
         }
+        
     }
 
 }
