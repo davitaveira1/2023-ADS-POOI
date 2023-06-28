@@ -19,7 +19,7 @@ public class Principal1 {
         File file = new File("c:\\poo\\entrada.txt");
         Scanner sc = null;
 
-        try {
+        try {            
             sc = new Scanner(file);
             
             while(sc.hasNextLine()){
