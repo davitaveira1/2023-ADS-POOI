@@ -12,17 +12,13 @@ import java.io.IOException;
  *
  * @author Davi
  */
-public class Principal2 {
+public class Principal3 {
     
     public static void main(String[] args) {
         
-        String path = "c:\\poo\\entrada2.txt";
-        FileReader fr=null;
-        BufferedReader br=null;
+        String path = "c:\\poo\\entrada.txt";
         
-        try {
-            fr = new FileReader(path);
-            br = new BufferedReader(fr);
+        try (BufferedReader br = new BufferedReader(new FileReader(path))){
             
             String line = br.readLine();
             while(line != null){
@@ -32,18 +28,6 @@ public class Principal2 {
             
         } catch (IOException e) {
             System.out.println("Erro: "+e.getMessage());
-            //e.printStackTrace();
-        } finally{
-            try {
-                if(br != null){
-                   br.close();
-                }
-                if(fr != null){
-                   fr.close(); 
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }        
     }    
 }
